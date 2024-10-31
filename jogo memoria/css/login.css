@@ -1,0 +1,55 @@
+body{
+    display:grid;
+    place-content: center;
+    height: 100vh;
+}
+
+.container{
+    display:grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 10px;
+}
+.cartas{
+    position: relative;
+    cursor:pointer;
+
+}
+
+.atras{
+    background-color: orange;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    font-size: 40px;
+    display: grid;
+    place-content: center;
+    font-weight: bold;
+    backface-visibility: hidden;
+    transition: all 500ms ease;
+
+}
+
+.frente{
+    transform: rotateY(100deg);
+    backface-visibility: hidden;
+    transition: all 500ms ease;
+}
+
+.carta-virada .frente{
+    transform: rotateY(0deg);
+}
+
+.carta-virada .atras{
+    transform: rotateY(100deg);
+
+}
+button{
+    border: none;
+    padding: 20px;
+    width: 250px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px ;
+    place-self: center;
+    cursor: pointer;
+}
